@@ -1,0 +1,10 @@
+.vscode
+
+node_modules
+package.json
+package-lock.json
+
+.next
+
+tsconfig.json
+next-env.d.ts
