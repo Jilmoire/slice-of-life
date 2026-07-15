@@ -22,14 +22,14 @@ export function NavBar() {
           <IconButton>
             <CollectionsIcon/> 
           </IconButton>
-          <Typography>
+          <Typography variant="h6">
             <Link href="#" color="textPrimary" underline="none">Slice of Life</Link>
           </Typography>
         </Box>
 
         <Box sx={{ display: "flex", alignItems: 'center', gap: 1 }}>
           <Breadcrumbs>
-            <Link underline="hover" color="inherit" href="#">
+            <Link underline="hover" color="inherit" href="/login">
               Sign In
             </Link>
             <Link underline="hover" color="inherit" href="#">
@@ -45,4 +45,23 @@ export function NavBar() {
       </Container>
     </AppBar>
     );
+}
+
+export function DashNav(){
+  <AppBar position="static">
+      <Container maxWidth={false}>
+      <Toolbar sx={{justifyContent: "space-between"}}>
+        <Box sx={{ display: "flex", alignItems: 'center', gap: 1 }}>
+          <IconButton>
+            <CollectionsIcon/> 
+          </IconButton>
+          <Typography variant="h6">
+            <Link href="#" color="textPrimary" underline="none">Slice of Life</Link>
+          </Typography>
+        </Box>
+
+
+      </Toolbar>
+    </Container>
+  </AppBar>
 }
