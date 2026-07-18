@@ -15,6 +15,7 @@ import CollectionsIcon from '@mui/icons-material/Collections';
 
 export function NavBar() {
   return (
+    <Box>
     <AppBar position="static">
       <Container maxWidth={false}>
       <Toolbar sx={{justifyContent: "space-between"}}>
@@ -44,24 +45,29 @@ export function NavBar() {
       </Toolbar>
       </Container>
     </AppBar>
+    </Box>
     );
 }
 
 export function DashNav(){
-  <AppBar position="static">
-      <Container maxWidth={false}>
-      <Toolbar sx={{justifyContent: "space-between"}}>
-        <Box sx={{ display: "flex", alignItems: 'center', gap: 1 }}>
-          <IconButton>
-            <CollectionsIcon/> 
-          </IconButton>
-          <Typography variant="h6">
-            <Link href="#" color="textPrimary" underline="none">Slice of Life</Link>
-          </Typography>
-        </Box>
+  return(
+    <Box>
+    <AppBar position="static">
+        <Container maxWidth={false}>
+        <Toolbar sx={{justifyContent: "space-between"}}>
+          <Box sx={{ display: "flex", alignItems: 'center', gap: 1 }}>
+            <IconButton>
+              <CollectionsIcon/> 
+            </IconButton>
+            <Typography variant="h6">
+              <Link href="#" color="textPrimary" underline="none">Slice of Life</Link>
+            </Typography>
+          </Box>
 
 
-      </Toolbar>
-    </Container>
-  </AppBar>
+        </Toolbar>
+      </Container>
+    </AppBar>
+    </Box>
+  );
 }

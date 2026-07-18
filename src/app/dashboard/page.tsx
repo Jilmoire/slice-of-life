@@ -1,5 +1,19 @@
 import Button from '@mui/material/Button';
 
+
+//custom modules
+import { DashNav } from '@/modules/assets/AppBar';
+
+
 export default function ButtonUsage() {
-  return <Button variant="contained">Hello world</Button>;
+  return (
+    <html>
+      <head/>
+        <body>
+              <DashNav/>
+
+        </body>
+    </html>
+  );
 }
+
