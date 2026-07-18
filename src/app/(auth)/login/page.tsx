@@ -4,9 +4,12 @@ import Container from '@mui/material/Container';
 import ImageListItem from '@mui/material/ImageListItem';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 //custom modules
 import { NavBar } from '@/modules/assets/AppBar';
+import { Loginform } from '@/modules/auth/LoginBox'
 
 export default function LoginPage(){
     return(
@@ -14,7 +17,7 @@ export default function LoginPage(){
             <head/>
                 <body>
                     <NavBar/>
-                              <Container maxWidth="xl" disableGutters sx={{ display:"flex",alignItems: "center",  justifyContent: "space-between", gap: 20}}>
+                            <Container maxWidth="xl" disableGutters sx={{ display:"flex",alignItems: "center",  justifyContent: "space-between", gap: 20}}>
                                 <ImageList cols={5} variant="quilted" sx={{ width: '60vw', height: '70vh', borderRadius: 3, overflow: 'hidden' }}>
                                 <ImageListItem cols={2} rows={1}>
                                     <img src="/photos/random_wallpaper.png"></img>
@@ -30,11 +33,7 @@ export default function LoginPage(){
                                 </ImageListItem>
                                 </ImageList>
                                 
-                                <Box>
-                                <Typography variant="h4">
-                                    Organize and Cherish your Memories
-                                </Typography>
-                                </Box>
+                                <Loginform/>
                             </Container>
                 </body>
         </html>
