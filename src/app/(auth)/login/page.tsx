@@ -9,7 +9,6 @@ import Button from '@mui/material/Button';
 
 //custom modules
 import { NavBar } from '@/modules/assets/AppBar';
-import { Loginform } from '@/modules/auth/LoginBox'
 
 export default function LoginPage(){
     return(
@@ -33,7 +32,6 @@ export default function LoginPage(){
                                 </ImageListItem>
                                 </ImageList>
                                 
-                                <Loginform/>
                             </Container>
                 </body>
         </html>

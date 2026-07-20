@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button'
+import { Avatar, IconButton } from '@mui/material';
 
 export function Loginform(){
     return(
@@ -19,6 +20,18 @@ export function Loginform(){
                 <TextField id="userLogin" label="password" variant="outlined"/>
             </Box>
             <Button id="submitLogin "variant="contained" sx={{padding:1}}>Submit</Button>
+        </Box>
+    );
+}
+
+export function Logintoggle(){
+    return(
+        <Box>
+            <IconButton>
+                <Avatar>
+                    
+                </Avatar>
+            </IconButton>
         </Box>
     );
 }

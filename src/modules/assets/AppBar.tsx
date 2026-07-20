@@ -12,6 +12,9 @@ import Box from '@mui/material/Box';
 //mui icons
 import CollectionsIcon from '@mui/icons-material/Collections';
 
+//custom modules
+import { Logintoggle } from '@/modules/auth/LoginBox'
+
 
 export function NavBar() {
   return (
@@ -62,9 +65,10 @@ export function DashNav(){
             <Typography variant="h6">
               <Link href="#" color="textPrimary" underline="none">Slice of Life</Link>
             </Typography>
+            <Typography variant ="subtitle1" sx={{color: "black"}}> | Dashboard</Typography>
           </Box>
 
-
+          <Logintoggle/>
         </Toolbar>
       </Container>
     </AppBar>
