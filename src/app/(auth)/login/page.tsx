@@ -9,6 +9,7 @@ import Button from '@mui/material/Button';
 
 //custom modules
 import { NavBar } from '@/modules/assets/AppBar';
+import { Loginform } from '@/modules/auth/LoginBox';
 
 export default function LoginPage(){
     return(
@@ -31,7 +32,7 @@ export default function LoginPage(){
                                     <img src="/photos/random_wallpaper.png"></img>
                                 </ImageListItem>
                                 </ImageList>
-                                
+                                <Loginform/>
                             </Container>
                 </body>
         </html>
