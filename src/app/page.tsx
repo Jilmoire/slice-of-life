@@ -1,5 +1,12 @@
 import Button from '@mui/material/Button';
+import {LoginSignup} from '@/modules/auth/LoginBox';
+import {WelcomeBar} from '@/modules/navigation/NavBars'
 
-export default function ButtonUsage() {
-  return <Button variant="contained">Hello world</Button>;
+export default function Landing() {
+  return (
+    <>
+    <WelcomeBar/>
+    <LoginSignup/>
+    </>
+  );
 }
