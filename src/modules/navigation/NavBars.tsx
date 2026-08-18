@@ -1,4 +1,4 @@
-"use client";
+
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -9,8 +9,9 @@ import Typography from '@mui/material/Typography';
 
 export function WelcomeBar() {
     return(
+        <Box>
         <AppBar>
-            <Toolbar sx={{padding:'1.3rem'}}>
+            <Toolbar>
                 <IconButton edge="start" color="inherit" aria-label="menu" sx={{mr: 2, ml: 3}}>
                     <MenuIcon />
                 </IconButton>
@@ -23,5 +24,6 @@ export function WelcomeBar() {
                 </Box>
             </Toolbar>
         </AppBar>
+        </Box>
     )
 }
