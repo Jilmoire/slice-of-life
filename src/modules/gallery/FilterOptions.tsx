@@ -1,23 +1,60 @@
-import Grid from '@mui/material/Grid'
-import Container from '@mui/material/Container'
+"use client";
+
+import * as React from 'react';
 import Box from '@mui/material/Box'
 import Select from '@mui/material/Select'
 import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import ToggleButton from '@mui/material/ToggleButton'
+
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+
+import dayjs from 'dayjs';
+import { DateCalendar } from '@mui/x-date-pickers/DateCalendar'
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs' 
+import { Typography } from '@mui/material';
 
 export function ImgFilter() {
+  const [filter, setFilter] = React.useState("");
+  const [day, setDay] = React.useState(dayjs());
+
+  const handleChange = (event) => {
+    setFilter(event.target.value);
+  };
+
   return (
-    <Box>
-        <FormControl fullWidth>
-            <InputLabel id="imgfilter">Select Filter</InputLabel>
-                <Select labelId="demo-simple-select-label" id="demo-simple-select" label="Age">
-                    <MenuItem>By Date</MenuItem>
-                    <MenuItem>By Name</MenuItem>
-                    <MenuItem>By Size</MenuItem>
-                </Select>
-        </FormControl>
-    </Box>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <Box>
+          <FormControl fullWidth>
+              <InputLabel id="imgfilter">Select Filter</InputLabel>
+                  <Select labelId="imgfilter" id="demo-simple-select" label="Filter" value={filter} onChange={handleChange}>
+                      <MenuItem value={"Show All"}> Show All</MenuItem>
+                      <MenuItem value={"By Date Uploaded"}>By Date Uploaded</MenuItem>
+                      <MenuItem value={"By Name"}>By Name</MenuItem>
+                      <MenuItem value={"By Size"}>By Size</MenuItem>
+                  </Select>
+          </FormControl>
+
+          <Box>
+            <DateCalendar disabled={filter !== "By Date Uploaded"} value={day} onChange={(newValue) => setDay(newValue)}/>
+          </Box>
+
+          <Box>
+            <ToggleButtonGroup aria-label="Medium sizes">
+              <ToggleButton value="a-z">
+                <ArrowDownwardIcon /> <Typography>: A-Z</Typography>
+              </ToggleButton>
+              <ToggleButton value="z-a">
+                <ArrowUpwardIcon /> <Typography>: Z-A</Typography>
+              </ToggleButton>
+            </ToggleButtonGroup>
+          </Box>
+      </Box>
+    </LocalizationProvider>
 
   );
 }
