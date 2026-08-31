@@ -34,8 +34,7 @@ export function ImgFilter() {
                   <Select labelId="imgfilter" id="demo-simple-select" label="Filter" value={filter} onChange={handleChange}>
                       <MenuItem value={"Show All"}> Show All</MenuItem>
                       <MenuItem value={"By Date Uploaded"}>By Date Uploaded</MenuItem>
-                      <MenuItem value={"By Name"}>By Name</MenuItem>
-                      <MenuItem value={"By Size"}>By Size</MenuItem>
+                      <MenuItem value={"Alphbetically"}>Alphbetically</MenuItem>
                   </Select>
           </FormControl>
 
@@ -44,7 +43,7 @@ export function ImgFilter() {
           </Box>
 
           <Box>
-            <ToggleButtonGroup aria-label="Medium sizes">
+            <ToggleButtonGroup  disabled={filter !== "Alphbetically"}>
               <ToggleButton value="a-z">
                 <ArrowDownwardIcon /> <Typography>: A-Z</Typography>
               </ToggleButton>
